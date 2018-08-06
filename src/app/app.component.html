@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-md-12"><app-header></app-header></div>
+    <div class="col-md-12"><app-header (featureSelected)="navigateFeature($event)"></app-header></div>
   </div>
   <div class="row">
-    <div class="col-md-12"><app-recipes></app-recipes></div>
-    <div class="col-md-12"><app-shopping-list></app-shopping-list></div>
+    <div class="col-md-12"><app-recipes *ngIf="selectedFeature === 'recipe'"></app-recipes></div>
+    <div class="col-md-12"><app-shopping-list *ngIf="selectedFeature === 'shopiing-list'"></app-shopping-list></div>
   </div>
 </div>

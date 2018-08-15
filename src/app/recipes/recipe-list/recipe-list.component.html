@@ -7,10 +7,10 @@
 <div class="row">
   <div class="col-md-12">
     <app-recipe-item
-      *ngFor="let recipe of recipes"
+      *ngFor="let recipe of recipes; let i = index"
       [recipe]="recipe"
-      (recipeSelected)="onRecipeSelect(recipe)"
-    ></app-recipe-item>
+      [indx]="i">
+    </app-recipe-item>
   </div>
 </div>
 
